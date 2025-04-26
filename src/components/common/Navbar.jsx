@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
+import Button from "./Button";
 
 const navLniks = [
   {
@@ -32,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className="bg-linear-to-r from-cyan-500 to-blue-500 py-3 px-10 flex justify-between items-center">
       <div className="relative h-10 w-50">
-        <img src={logo} className="absolute object-cover" />
+        <img src={logo} className="absolute object-cover" alt="logo" />
       </div>
 
       <div>
@@ -49,9 +50,7 @@ const Navbar = () => {
       </div>
 
       <div>
-        <button className="bg-white text-blue-800 rounded-full py-2 px-5 cursor-pointer hover:bg-blue-500 hover:text-white duration-200">
-          Get Started
-        </button>
+        <Button className="bg-white text-[#022183]">Get Started</Button>
       </div>
     </nav>
   );
