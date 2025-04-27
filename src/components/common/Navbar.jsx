@@ -31,26 +31,32 @@ const navLniks = [
 
 const Navbar = () => {
   return (
-    <nav className="bg-linear-to-r from-cyan-500 to-blue-500 py-3 px-10 flex justify-between items-center">
-      <div className="relative h-10 w-50">
-        <img src={logo} className="absolute object-cover" alt="logo" />
-      </div>
+    <nav className="bg-transparent top-0 bg-gradient-to-r from-[#E0D7FF] via-[#3B82F6] to-[#020B3A]  py-3 px-10 flex justify-between items-center inset-x-0 z-50">
+      <div className="flex justify-between w-full items-center">
+        <div className="relative h-10 w-50">
+          <img
+            src={logo}
+            className="absolute object-cover cursor-pointer"
+            alt="logo"
+          />
+        </div>
 
-      <div>
-        <ul className="flex gap-10 items-center">
-          {navLniks.map((link) => (
-            <li
-              key={link.id}
-              className="text-white font-medium hover:text-gray-500 duration-200 cursor-pointer"
-            >
-              {link.title}
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div>
+          <ul className="flex gap-10 items-center">
+            {navLniks.map((link) => (
+              <li
+                key={link.id}
+                className="text-white font-medium cursor-pointer"
+              >
+                {link.title}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <div>
-        <Button className="bg-white text-[#022183]">Get Started</Button>
+        <div>
+          <Button className="bg-white text-[#022183]">Get Started</Button>
+        </div>
       </div>
     </nav>
   );
