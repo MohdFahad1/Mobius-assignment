@@ -138,9 +138,11 @@ export default function PricingPlans() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center">
-          <div className="text-4xl font-bold">$150</div>
-          <div className="text-lg mb-4">/week</div>
+        <div className="flex flex-col gap-10">
+          <div className="flex justify-center">
+            <div className="text-4xl font-bold">$150</div>
+            <div className="text-lg mb-4 mt-3">/week</div>
+          </div>
           <Button
             arrow
             className="bg-white text-[#0649E7] font-semibold py-2 px-6 rounded-lg hover:bg-gray-100"
