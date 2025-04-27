@@ -1,5 +1,6 @@
 import React from "react";
 import play from "../../assets/play.png";
+import Button from "../common/Button";
 
 const data = [
   {
@@ -29,9 +30,9 @@ const Testimonials = () => {
         {data.map((item) => (
           <div
             key={item.id}
-            className="flex-col bg-[#0649E7] w-[300px] border-[#0649E7] border-2 rounded-2xl overflow-hidden h-auto pb-5"
+            className="flex-col bg-[#0649E7] w-[300px] border-[#0649E7] border-2 rounded-3xl overflow-hidden h-auto pb-5"
           >
-            <div className="bg-white rounded-b-2xl h-[200px] flex items-center justify-center">
+            <div className="bg-white rounded-b-3xl h-[200px] flex items-center justify-center">
               <div className="bg-[#0649E7] size-10 rounded-full flex items-center justify-center">
                 <img src={play} alt="Play Button" className="h-5 w-5" />
               </div>
@@ -46,6 +47,18 @@ const Testimonials = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="flex items-center justify-center mt-10 gap-20">
+        <Button
+          arrow={true}
+          className="border-2 border-[#0649E7] text-[#0649E7]"
+        >
+          More customer testimonials
+        </Button>
+        <Button arrow={true} className="bg-[#0649E7] text-white">
+          Get Started
+        </Button>
       </div>
     </div>
   );
