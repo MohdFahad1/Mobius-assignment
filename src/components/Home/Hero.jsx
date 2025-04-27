@@ -57,7 +57,10 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={fadeUp}>
-          <Button className="text-[#022183] bg-white" arrow>
+          <Button
+            className="text-[#022183] bg-white hover:bg-[#022183] hover:text-white duration-200"
+            arrow
+          >
             Get Started
           </Button>
         </motion.div>

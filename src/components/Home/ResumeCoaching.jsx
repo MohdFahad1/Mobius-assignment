@@ -82,7 +82,7 @@ export default function ResumeCoaching() {
             </ul>
             <Button
               arrow
-              className="mt-8 bg-[#0649E7] text-white font-medium w-fit rounded-full py-3 px-6 hover:bg-blue-700"
+              className="mt-8 bg-[#0649E7] text-white font-medium w-fit rounded-full py-3 px-6  hover:bg-white hover:border-[#0649E7] border-2 hover:text-[#0649E7] duration-200"
             >
               Get Started
             </Button>
@@ -100,7 +100,7 @@ export default function ResumeCoaching() {
         </span>
         <Button
           arrow
-          className="bg-white text-[#0649E7] rounded-full h-14 w-14 text-2xl flex items-center justify-center"
+          className="bg-white text-[#0649E7] rounded-full h-14 w-14 text-2xl flex hover:bg-[#0649E7] hover:text-white duration-200 items-center justify-center cursor-pointer hover:border-white border-2"
         />
       </div>
     </section>

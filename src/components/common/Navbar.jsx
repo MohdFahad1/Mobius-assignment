@@ -34,7 +34,10 @@ export default function Navbar() {
       </ul>
 
       <div className="hidden md:block">
-        <Button className="bg-white text-[#022183]" arrow>
+        <Button
+          className="bg-white text-[#022183] hover:bg-[#022183] hover:text-white duration-200"
+          arrow
+        >
           Get Started
         </Button>
       </div>
@@ -93,7 +96,7 @@ export default function Navbar() {
             ))}
             <li className="pt-4">
               <Button
-                className="w-full bg-white text-[#022183] justify-center"
+                className="w-full bg-white text-[#022183] justify-center hover:bg-[#022183] hover:text-white duration-200"
                 arrow
                 onClick={() => setMenuOpen(false)}
               >

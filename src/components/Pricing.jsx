@@ -171,7 +171,7 @@ export default function PricingPlans() {
           </div>
           <Button
             arrow
-            className="bg-white text-[#0649E7] font-semibold py-2 px-6 rounded-lg hover:bg-gray-100"
+            className="bg-white text-[#0649E7] font-semibold py-2 px-6 rounded-lg hover:bg-[#0649E7] hover:text-white hover:border-white border-2 duration-200"
           >
             Get Started
           </Button>

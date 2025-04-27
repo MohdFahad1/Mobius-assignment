@@ -41,11 +41,9 @@ const Testimonials = () => {
             </div>
             <p className="text-lg text-white px-5 mt-5">{item.content}</p>
             <div className="flex justify-end px-5">
-              <div className="flex items-center justify-center rounded-full bg-white w-12 h-12 mt-5">
-                <button className="text-[#0649E7] rounded-full text-3xl">
-                  ↗
-                </button>
-              </div>
+              <button className="text-[#0649E7] rounded-full text-3xl hover:bg-[#0649E7] hover:text-white duration-200 flex items-center justify-center bg-white w-12 h-12 cursor-pointer hover:border-white border-2">
+                ↗
+              </button>
             </div>
           </div>
         ))}
@@ -55,13 +53,13 @@ const Testimonials = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center mt-10 gap-4 sm:gap-20">
         <Button
           arrow
-          className="border-2 border-[#0649E7] text-[#0649E7] w-full sm:w-auto text-center flex items-center justify-center"
+          className="border-2 border-[#0649E7] text-[#0649E7] hover:bg-[#0649E7] hover:text-white duration-200 w-full sm:w-auto text-center flex items-center justify-center"
         >
           More customer testimonials
         </Button>
         <Button
           arrow
-          className="bg-[#0649E7] text-white w-full sm:w-auto text-center flex items-center justify-center"
+          className="bg-[#0649E7] text-white w-full sm:w-auto text-center flex items-center justify-center hover:bg-white hover:text-[#0649E7] hover:border-[#0649E7] border-2 duration-200"
         >
           Get Started
         </Button>
