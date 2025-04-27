@@ -46,10 +46,10 @@ const services = [
 
 export default function ResumeCoaching() {
   return (
-    <section className="px-32 py-20 bg-white">
+    <section className="px-4 sm:px-6 md:px-32 py-20 bg-white">
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <h2 className="text-3xl font-semibold text-[#0649E7]">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-[#0649E7]">
           Resume Building & Coaching
         </h2>
         <p className="mt-2 text-base text-[#0649E7]">
@@ -59,7 +59,7 @@ export default function ResumeCoaching() {
       </div>
 
       {/* Two service cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
         {services.map((s) => (
           <div
             key={s.title}
@@ -82,7 +82,7 @@ export default function ResumeCoaching() {
             </ul>
             <Button
               arrow
-              className="mt-8 bg-[#0649E7] text-white font-medium w-fit rounded-full py-3 px-6  hover:bg-blue-700 "
+              className="mt-8 bg-[#0649E7] text-white font-medium w-fit rounded-full py-3 px-6 hover:bg-blue-700"
             >
               Get Started
             </Button>
@@ -90,11 +90,14 @@ export default function ResumeCoaching() {
         ))}
       </div>
 
-      <div className="bg-[#0649E7] rounded-2xl px-32 py-10 flex items-center justify-between">
-        <div className="text-white uppercase text-3xl w-[200px]">
+      {/* Bottom CTA */}
+      <div className="bg-[#0649E7] rounded-2xl px-4 sm:px-6 md:px-32 py-10 flex flex-col sm:flex-row items-center sm:justify-between gap-6 text-center sm:text-left">
+        <div className="text-white uppercase text-xl sm:text-2xl">
           STILL HAVE DOUBTS?
         </div>
-        <span className="text-white text-4xl font-bold mr-6">Contact Us</span>
+        <span className="text-white text-2xl sm:text-3xl font-bold">
+          Contact Us
+        </span>
         <Button
           arrow
           className="bg-white text-[#0649E7] rounded-full h-14 w-14 text-2xl flex items-center justify-center"

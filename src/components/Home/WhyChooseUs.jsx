@@ -22,30 +22,26 @@ const data = [
     id: 3,
     heading: "Beat the Line",
     content:
-      "We search, shortlist, and apply for you, so your name shows up first — every single day.",
+      "We search, shortlist, and apply for you, so your name shows up first — every single day.",
     imgSrc: star,
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <div className="px-32 py-20 ">
-      <div className="bg-[#F8FAFF] p-10 rounded-2xl">
-        <h1 className="text-[#0649E7] text-3xl font-medium mb-10">
-          Why Choose Us ?
+    <div className="px-4 sm:px-6 md:px-32 py-20">
+      <div className="bg-[#F8FAFF] p-6 sm:p-10 rounded-2xl">
+        <h1 className="text-[#0649E7] text-3xl sm:text-4xl font-medium mb-10 text-center md:text-left">
+          Why Choose Us?
         </h1>
-        <div className="flex gap-10 justify-center">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
           {data.map((item) => (
             <div
               key={item.id}
-              className="flex-col w-[300px] border-[#0649E7] border-2 rounded-3xl overflow-hidden h-auto p-5"
+              className="flex flex-col items-start w-full sm:w-[300px] border-2 border-[#0649E7] rounded-3xl overflow-hidden p-5"
             >
-              <img
-                src={item.imgSrc}
-                alt={item.heading}
-                height={45}
-                width={45}
-              />
+              <img src={item.imgSrc} alt={item.heading} className="h-12 w-12" />
               <h3 className="text-xl font-semibold text-[#022183] mt-5 mb-3">
                 {item.heading}
               </h3>

@@ -58,23 +58,20 @@ const plans = [
 
 export default function PricingPlans() {
   return (
-    <section className="px-32 py-20 bg-white">
-      <h2 className="text-3xl font-semibold text-[#0649E7] mb-12">
+    <section className="px-4 sm:px-6 md:px-20 lg:px-32 py-20 bg-white">
+      <h2 className="text-3xl font-semibold text-[#0649E7] mb-12 text-center lg:text-left">
         Job Application Service Plans
       </h2>
 
       {/* Top three plans */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
         {plans.map((plan) => (
           <div
             key={plan.title}
-            className="relative border border-[#0649E7] rounded-2xl p-8 flex flex-col h-full"
+            className="relative w-full sm:w-[300px] border border-[#0649E7] rounded-2xl p-6 sm:p-8 flex flex-col h-full"
           >
             {plan.badge && (
-              <span
-                className="absolute top-0 right-16 transform translate-y-1/2 translate-x-1/2 
-              bg-[#e5edfe] border-[#0649E7] border-2 text-[#0649E7] text-xs font-bold uppercase px-3 py-1 rounded-full"
-              >
+              <span className="absolute top-0 right-6 sm:right-8 transform -translate-y-1/2 bg-[#e5edfe] border-[#0649E7] border-2 text-[#0649E7] text-xs font-bold uppercase px-3 py-1 rounded-full">
                 {plan.badge}
               </span>
             )}
@@ -98,7 +95,7 @@ export default function PricingPlans() {
 
             <Button
               arrow
-              className="mt-8 bg-[#0649E7] text-white font-medium rounded-lg hover:bg-blue-700 flex items-center justify-center"
+              className="mt-8 bg-[#0649E7] text-white font-medium rounded-lg hover:bg-blue-700 flex items-center justify-center py-2"
             >
               Get Started
             </Button>
@@ -108,7 +105,7 @@ export default function PricingPlans() {
 
       {/* Advance plan banner */}
       <div className="mt-16 bg-[#0649E7] text-white rounded-2xl p-8 flex flex-col lg:flex-row items-center justify-between">
-        <div className="max-w-2xl mb-6 lg:mb-0">
+        <div className="max-w-2xl mb-6 lg:mb-0 text-center lg:text-left">
           <h3 className="text-2xl font-semibold">Advance</h3>
           <p className="mt-1 text-gray-200">
             Top-tier support for serious job hunters:
