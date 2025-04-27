@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Button from "./common/Button";
 
 const CheckIcon = () => (
@@ -56,6 +57,24 @@ const plans = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export default function PricingPlans() {
   return (
     <section className="px-4 sm:px-6 md:px-20 lg:px-32 py-20 bg-white">
@@ -63,11 +82,18 @@ export default function PricingPlans() {
         Job Application Service Plans
       </h2>
 
-      {/* Top three plans */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+      {/* top three plans */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center"
+      >
         {plans.map((plan) => (
-          <div
+          <motion.div
             key={plan.title}
+            variants={itemVariants}
             className="relative w-full sm:w-[300px] border border-[#0649E7] rounded-2xl p-6 sm:p-8 flex flex-col h-full"
           >
             {plan.badge && (
@@ -99,9 +125,9 @@ export default function PricingPlans() {
             >
               Get Started
             </Button>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Advance plan banner */}
       <div className="mt-16 bg-[#0649E7] text-white rounded-2xl p-8 flex flex-col lg:flex-row items-center justify-between">
