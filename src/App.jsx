@@ -1,6 +1,7 @@
 import Navbar from "./components/common/Navbar";
 import About from "./components/Home/About";
 import Hero from "./components/Home/Hero";
+import ResumeCoaching from "./components/Home/ResumeCoaching";
 import Testimonials from "./components/Home/Testimonials";
 import WhyChooseUs from "./components/Home/WhyChooseUs";
 import Work from "./components/Home/Work";
@@ -16,6 +17,7 @@ function App() {
       <Testimonials />
       <WhyChooseUs />
       <Pricing />
+      <ResumeCoaching />
     </>
   );
 }
