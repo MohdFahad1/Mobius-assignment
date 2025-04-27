@@ -1,45 +1,44 @@
 import React from "react";
 
 const data = [
-  {
-    id: 1,
-    content: "Submit intake Form",
-  },
-  {
-    id: 2,
-    content: "We do the search and curation for list of jobs",
-  },
-  {
-    id: 3,
-    content: "You approve, we do the tedious part (applying)",
-  },
-  {
-    id: 4,
-    content: "You get the interviews",
-  },
+  { id: 1, content: "Submit intake Form" },
+  { id: 2, content: "We do the search and curation for list of jobs" },
+  { id: 3, content: "You approve, we do the tedious part (applying)" },
+  { id: 4, content: "You get the interviews" },
 ];
 
-const Work = () => {
+export default function Work() {
   return (
-    <div className="flex items-center justify-center bg-white py-10 ">
-      <div>
-        <h1 className="text-3xl font-medium text-[#0649E7] mb-16">
+    <section className="bg-white py-10 px-4 sm:px-6 lg:px-20">
+      <div className="max-w-4xl mx-auto text-center sm:text-left">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[#0649E7] mb-8">
           How we work?
-        </h1>
-        <div className="flex items-center justify-center gap-22">
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {data.map((item) => (
-            <div key={item.id} className="w-[200px] h-[150px]">
-              <div className="rounded-full border-2 w-14 h-14 p-3 flex items-center justify-center border-[#022183]">
-                <h2 className="text-3xl font-medium">{item.id}</h2>
+            <div
+              key={item.id}
+              className="flex flex-col items-center text-center sm:text-left sm:items-start"
+            >
+              {/* number */}
+              <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 border-2 border-[#022183] rounded-full">
+                <span className="text-xl sm:text-2xl font-semibold text-[#0649E7]">
+                  {item.id}
+                </span>
               </div>
-              <div className="h-[1.5px] w-26 bg-[#0649E7] mt-3 mb-4"></div>
-              <p className="text-[#0649E7]">{item.content}</p>
+
+              {/* Divider */}
+              <div className="w-16 sm:w-24 h-[2px] bg-[#0649E7] my-4" />
+
+              {/* Description */}
+              <p className="text-[#0649E7] text-sm sm:text-base">
+                {item.content}
+              </p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Work;
+}

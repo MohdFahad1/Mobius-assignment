@@ -4,20 +4,28 @@ import nicole from "../../assets/nicole.png";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-[#010A26] via-[#0A1C44] to-[#0058FF] min-h-[80vh] flex items-start justify-start px-40 flex-col pb-24">
-      <h1 className="text-white text-3xl font-semibold mt-40">About Us</h1>
+    <div
+      className="
+        bg-gradient-to-b from-[#010A26] via-[#0A1C44] to-[#0058FF]
+        min-h-[80vh] flex flex-col items-start justify-start
+        px-4 sm:px-20 lg:px-40 pb-24
+      "
+    >
+      <h1 className="text-white text-3xl font-semibold mt-20 sm:mt-40">
+        About Us
+      </h1>
 
-      <div>
+      <div className="space-y-16">
         {/* ASHWIN */}
-        <div className="flex gap-32 px-20 mt-10 items-center">
-          <div className="bg-white rounded-full relative size-[270px] overflow-hidden p-3">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-32 px-4 sm:px-20 md:px-20 mt-10 items-center">
+          <div className="bg-white rounded-full relative w-[200px] h-[200px] md:w-[270px] md:h-[270px] overflow-hidden p-3">
             <img
               src={ashwin}
               alt="Ashwin"
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 object-contain"
+              className="absolute sm:bottom-0 left-1/2 transform -translate-x-1/2 object-contain"
             />
           </div>
-          <div className="w-1/2 text-white flex-col">
+          <div className="w-full md:w-1/2 text-white flex flex-col">
             <p className="mb-8">
               Ashwin is the founder of mobiusengine.ai. He is an accomplished
               senior executive with over 20 years of experience in cloud
@@ -33,15 +41,15 @@ const About = () => {
         </div>
 
         {/* NICOLE */}
-        <div className="flex gap-32 px-20 mt-20 items-center">
-          <div className="bg-white rounded-full relative size-[270px] overflow-hidden p-3">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-32 px-4 sm:px-20 md:px-20 mt-10 md:mt-20 items-center">
+          <div className="bg-white rounded-full relative w-[200px] h-[200px] md:w-[270px] md:h-[270px] overflow-hidden p-3">
             <img
               src={nicole}
               alt="Nicole"
               className="absolute bottom-0 left-1/2 transform -translate-x-1/2 object-contain"
             />
           </div>
-          <div className="w-1/2 text-white flex-col">
+          <div className="w-full md:w-1/2 text-white flex flex-col">
             <p className="mb-8">
               Nicole is an Executive coach at Mobius specializing in resume
               builds and career advisory.
@@ -58,12 +66,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-white mt-10 mx-auto">
-        <p className="ml-16 mb-3 hover:underline cursor-pointer">
+      {/* Footer links */}
+      <div className="text-white mt-10 flex flex-col md:flex-row md:space-x-12 items-center">
+        <p className="ml-0 md:ml-16 mb-3 md:mb-0 hover:underline cursor-pointer">
           Learn more about our Board of Advisors​ ↗
         </p>
-        <p className="ml-16 hover:underline cursor-pointer">
-          Follow us on our Linkedin page ↗
+        <p className="ml-0 md:ml-16 hover:underline cursor-pointer">
+          Follow us on our Linkedin page ↗
         </p>
       </div>
     </div>
